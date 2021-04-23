@@ -46,7 +46,7 @@ public class Zad4 {
         double counter = 0;
         Arrays.sort(array);
         for (double value : array) {
-            if (value <= x && y <= value) {
+            if (value > x && y > value) {
                 sum += value;
                 counter++;
             }
