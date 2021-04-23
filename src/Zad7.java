@@ -3,6 +3,8 @@
 Rozmiar oraz elementy tablicy są losowane z przedziału <10,30>.
 Wypisz te elementy tablicy, które przy dzieleniu przez 5 dają resztę,
 która jest większa od ostatniej cyfry dzielonego elementu tablicy.
+!!!
+Wszystkie liczby dzielone przez 5 mają taką samą resztę jak i cyfrę jedności, dlatego nic się nie wyświetli.
  */
 
 import java.util.Arrays;
@@ -42,8 +44,8 @@ public class Zad7 {
         if (array == null) {
             throw new IllegalArgumentException("Array is null!!!");
         }
-        for (int i = 1; i < array.length; i++) {
-            if (array[i] % 5  > unities(array[i])) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] % 5 > unities(array[i])) {
                 System.out.println(array[i]);
             }
         }
