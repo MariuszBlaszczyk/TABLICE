@@ -51,7 +51,7 @@ public class Zad5 {
         }
         int counter = 0;
         for (int i = 0; i < array.length; i++) {
-            if (array[i] % number == 0) {
+            if (number % array[i] == 0) {
                 counter++;
             }
         }
