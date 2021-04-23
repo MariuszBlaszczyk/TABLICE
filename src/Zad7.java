@@ -42,14 +42,9 @@ public class Zad7 {
         if (array == null) {
             throw new IllegalArgumentException("Array is null!!!");
         }
-        for (int i = 0; i < array.length; i++) {
-            // czym się różni w ifie jeśli dam    i % 5     od   array[i] % 5
-            //chyba już się o to pytałem, ale nie pamiętam powiem szczerze
-            if (array[i] % 5 != 0) {
-                array[i] = i;
-            }
-            if (i > array[array.length-1]) {
-                System.out.println(i);
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] % 5  > unities(array[i])) {
+                System.out.println(array[i]);
             }
         }
     }
