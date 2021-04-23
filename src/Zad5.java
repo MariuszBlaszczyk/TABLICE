@@ -11,7 +11,7 @@ public class Zad5 {
 
     static int getArraySizeFromUser() {
         int number;
-        var scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the array size");
         number = scanner.nextInt();
         while ((number <= 0)) {
@@ -22,7 +22,7 @@ public class Zad5 {
     }
 
     static int getArrayElementsFromUser() {
-        var scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the element of the array:");
         return scanner.nextInt();
     }
@@ -36,8 +36,8 @@ public class Zad5 {
 
     static int[] generateArray() {
         System.out.println("Enter the data and create an array.\n");
-        var size = getArraySizeFromUser();
-        var array = new int[size];
+        int size = getArraySizeFromUser();
+        int[] array = new int[size];
         for (int i = 0; i < array.length; i++) {
             array[i] = getArrayElementsFromUser();
         }
@@ -49,7 +49,7 @@ public class Zad5 {
         if (array == null) {
             throw new IllegalArgumentException("Array is null");
         }
-        var counter = 0;
+        int counter = 0;
         for (int i = 0; i < array.length; i++) {
             if (array[i] % number == 0) {
                 counter++;
