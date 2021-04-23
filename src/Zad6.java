@@ -17,7 +17,7 @@ public class Zad6 {
 
     static int getArraySizeFromUser() {
         int number;
-        var scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the array size");
         number = scanner.nextInt();
         while (number <= 0) {
@@ -35,8 +35,8 @@ public class Zad6 {
     }
 
     static int[] generateArray(int evenMin, int evenMax, int oddMin, int oddMax) {
-        var sizeArray = getArraySizeFromUser();
-        var array = new int[sizeArray];
+        int sizeArray = getArraySizeFromUser();
+        int[] array = new int[sizeArray];
         for (int i = 0; i < array.length; i++) {
             if (array[i] % 2 == 0) {
                 array[i] = generateNumber(evenMin, evenMax);
@@ -51,7 +51,7 @@ public class Zad6 {
         if (array == null) {
             throw new IllegalArgumentException("Array is null");
         }
-        var sum = 0;
+        int sum = 0;
         for (int i = 0; i < array.length; i++) {
             if (i % array[i] == 0) {
                 sum += i;
@@ -67,7 +67,7 @@ public class Zad6 {
         int minOdd = 30;
         int maxOdd = 50;
 
-        var array = generateArray(minEven, maxEven, minOdd, maxOdd);
+        int[] array = generateArray(minEven, maxEven, minOdd, maxOdd);
         System.out.println(Arrays.toString(array));
 
         System.out.println("The sum is: " + sumElementsDivideByIndex(array));
