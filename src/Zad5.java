@@ -69,7 +69,8 @@ public class Zad5 {
         int number = generateNumber(min, max);
         System.out.println("The number drawn is: " + number);
 
-        System.out.println("Elements:" + numberOfElementsDividedByNumber(array, number));
+        System.out.println("Number of elements that are divisors of a number:"
+                + numberOfElementsDividedByNumber(array, number));
 
     }
 }
