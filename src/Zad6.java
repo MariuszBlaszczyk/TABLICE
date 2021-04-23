@@ -40,20 +40,20 @@ public class Zad6 {
         for (int i = 0; i < array.length; i++) {
             if (array[i] % 2 == 0) {
                 array[i] = generateNumber(evenMin, evenMax);
-            } else if (array[i] % 2 != 0) {
+            } else {
                 array[i] = generateNumber(oddMin, oddMax);
             }
         }
         return array;
     }
 
-    static int sumElementsDivideByIndex (int[] array) {
+    static int sumElementsDivideByIndex(int[] array) {
         if (array == null) {
             throw new IllegalArgumentException("Array is null");
         }
         int sum = 0;
-        for (int i = 0; i < array.length; i++) {
-            if (i % array[i] == 0) {
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] % i == 0) {
                 sum += i;
             }
         }
