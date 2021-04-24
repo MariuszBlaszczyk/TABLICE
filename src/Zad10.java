@@ -33,7 +33,7 @@ public class Zad10 {
         return new Random().nextInt(max - min + 1) + min;
     }
 
-    static int[] generateArray() {
+    static void generateArrayAndShowElements() {
         Scanner scan = new Scanner(System.in);
         int size = getArraySizeFromUser();
         int[] array = new int[size];
@@ -50,20 +50,18 @@ public class Zad10 {
         for (int i = 0; i < array.length; i++) {
             array[i] = generateNumbers(number1, number2);
         }
+        System.out.println(Arrays.toString(array));
         int number3 = number2 - number1;
-        int[] secondArray = new int [array.length];
         for (int i = 0; i < array.length; i++) {
             if (i % 2 == 0 && array[i] % number3 == 0) {
-                secondArray[i] = array[i];
+                System.out.println(array[i]);;
             }
-        }
-        return secondArray;
+        };
     }
 
     public static void main(String[] args) {
 
-        int[] newArray = generateArray();
-        System.out.println(Arrays.toString(newArray));
+        generateArrayAndShowElements();
 
     }
 }
