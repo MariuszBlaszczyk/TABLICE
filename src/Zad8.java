@@ -29,7 +29,7 @@ public class Zad8 {
         int size = generateArraySize(sizeMin, sizeMax);
         System.out.println("Size array is: " + size);
         int[] array = new int[size];
-        int number = 0;
+        int number;
         for (int i = 1; i < array.length; i++) {
             do {
                 number = getArrayElementFromUser();
