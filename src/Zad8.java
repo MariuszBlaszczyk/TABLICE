@@ -32,7 +32,7 @@ public class Zad8 {
         for (int i = 0; i < array.length; i++) {
             do {
                 array[i] = getArrayElementFromUser();
-            } while (!(array[0] < array[1]));
+            } while (!(array[i - 1] < i));
         }
         return array;
     }
