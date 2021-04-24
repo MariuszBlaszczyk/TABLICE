@@ -27,10 +27,12 @@ public class Zad9 {
         int size = generateArraySize(sizeMin, sizeMax);
         int[] array = new int[size];
         System.out.println("Size array is: " + size + "." + "\n");
+        int number;
         for (int i = 0; i < array.length; i++) {
             do {
-                array[i] = generateArrayElement(valueMin, valueMax);
+                number = generateArrayElement(valueMin, valueMax);
             } while (!(array[i] % 3 == 0));
+            array[i] = number;
         }
         return array;
     }
